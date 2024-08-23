@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>My first three.js app</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<style>
 			body { margin: 0; }
 
@@ -22,12 +23,14 @@
                  
             }
 		</style>
+        
         <script type="importmap">
 			{
 				"imports": {
 					"three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
           "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
           "three": "/build/three.module.min.js",
+          "three/addons/": "./jsm/",
           "dat.gui": "/dat.gui"
 
         }
@@ -35,11 +38,12 @@
 		</script>
 	</head>
 	<body>
+        <div id="container"></div>
 		<script type="module" src="/main.js"></script>
 
-        <button id="startButtonId">Start</button>
+       <button id="startButtonId">Start</button>
         <button id="resetButtonId">End</button> 
 
-
+    
 	</body>
 </html>
